@@ -2,8 +2,6 @@ import React, {useState, useEffect} from 'react';
 import getGifs from './services/getGifs'
 import './App.css';
 
-const APIurl = 'https://api.giphy.com/v1/gifs/search?api_key=2eC2kFTVoJNhLXhr7JagZgaq8LyeepQp&q=starship tropper&limit=25&offset=0&rating=g&lang=en';
-
 function App() {
   const [gifs, setGifs] = useState([]);
   const [searchConfig, setSearchConfig] = useState({
