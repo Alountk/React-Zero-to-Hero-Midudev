@@ -1,31 +1,16 @@
-import React, {useState, useEffect} from 'react';
-import getGifs from './services/getGifs'
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import ListOfGif from "./components/ListOfGif";
 
 function App() {
-  const [gifs, setGifs] = useState([]);
   const [searchConfig, setSearchConfig] = useState({
-    keyword : 'red panda'
+    keyword: "programming",
   });
-
-  useEffect(()=>{
-      getGifs(searchConfig).then(imgs => setGifs(imgs));
-  },[])
 
   return (
     <div className="App">
       <section className="App-content">
-        {
-          gifs.map( (gif , i) => {
-
-          return <div key={i}>
-            <h4>{gif.title}</h4>
-            <small>{gif.id}</small>
-            <img src={gif.url} alt={gif.title} key={gif.id}/>
-          </div>
-          })
-        }
-        {/* <button onClick={() => setGifs(GifsPanda)}>Change</button> */}
+        <ListOfGif keyword={searchConfig} />
       </section>
     </div>
   );
