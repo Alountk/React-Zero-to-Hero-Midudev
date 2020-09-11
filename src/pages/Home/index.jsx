@@ -26,9 +26,12 @@ export default function Home() {
           value={keyword}
         />
       </form>
-      <h3 className="App-title">Ultima busqueda</h3>
-      <ListOfGifs gifs={gifs} />
-      <h3 className="App-title">Los gifs más populares</h3>
+      <div className="App-main">
+        <div className="App-results">
+          <h3 className="App-title">Ultima busqueda</h3>
+          <ListOfGifs gifs={gifs} />
+        </div>
+      </div>
       <ul>
         {POPULAR_GIFS.map((popularGif) => (
           <li key={popularGif}>
