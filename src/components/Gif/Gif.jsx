@@ -1,4 +1,5 @@
 import React from "react";
+// styles
 import './Gif.css';
 
 export default function Gif({ title, id, url }) {
