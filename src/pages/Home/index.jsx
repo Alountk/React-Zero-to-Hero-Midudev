@@ -8,7 +8,7 @@ const POPULAR_GIFS = ["Matrix", "Panda", "programming", "Fight"];
 export default function Home() {
   const [keyword, setKeyword] = useState(); // eslint-disable-next-line
   const [path, pushLocation] = useLocation(); // eslint-disable-next-line
-  const { loading, gifs } = useGifs();
+  const { gifs } = useGifs();
   const handleSubmit = (e) => {
     e.preventDefault();
     pushLocation(`/search/${keyword}`);
